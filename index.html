@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="HTML, CSS, Sass, SCSS, BEM, JS, RWD, Bilet do rozwoju">
+  <meta name="description" content="Bilet do rozwoju II - Frontend">
+  <meta name="author" content="Piotr Olszowy">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilet do rozwoju II - Frontend</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="src/styles/style.css">
+</head>
+
+<body>
+
+  <div class="modal-overlay"></div>
+
+  <section class="modal">
+
+    <header class="modal__header">
+      <h3 class="modal__headline">Skomentuj artykuł</h3>
+    </header>
+    <div class="modal__content">
+      <form class="form">
+        <input class="form__input" type="text" name="name" placeholder="Imię">
+        <input class="form__input" type="text" name="email" placeholder="Adres e-mail">
+        <textarea class="form__textarea" name="message" placeholder="Treść komentarza"></textarea>
+        <input class="form__submit" type="submit" value="Wyślij">
+      </form>
+    </div>
+    <button class="modal__close">Zamknij</button>
+
+  </section>
+
+  <section class="news">
+
+    <header class="news__header">
+      <h2 class="news__headline">
+        Lista artykułów
+      </h2>
+    </header>
+
+    <section class="news__content">
+
+      <article class="article article--active">
+        <div class="article__wrapper">
+          <header class="article__header">
+            <h3 class="article__title">
+              Tytuł artykułu
+            </h3>
+          </header>
+          <div class="article__info">
+            <span class="article__author">Autor artykułu</span><span class="article__date">13.02.2019</span>
+          </div>
+          <div class="article__content">
+            <p class="article__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia mollit anim id est laborum. Tempru orcis dapibus ultrices. Odio tempor orci dapibus ultrices in iaculis nunc sed augue fringilla ut morbi.
+            </p>
+          </div>
+        </div>
+        <div class="article__buttons">
+          <button class="article__button article__button--fav">Dodaj do ulubionych</button>
+          <button class="article__button article__button--comment">Dodaj komentarz</button>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article__wrapper">
+          <header class="article__header">
+            <h3 class="article__title">
+              Tytuł artykułu
+            </h3>
+          </header>
+          <div class="article__info">
+            <span class="article__author">Autor artykułu</span><span class="article__date">13.02.2019</span>
+          </div>
+          <div class="article__content">
+            <p class="article__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia mollit anim id est laborum. Tempru orcis dapibus ultrices. Odio tempor orci dapibus ultrices in iaculis nunc sed augue fringilla ut morbi.
+            </p>
+          </div>
+        </div>
+        <div class="article__buttons">
+          <button class="article__button article__button--fav">Dodaj do ulubionych</button>
+          <button class="article__button article__button--comment">Dodaj komentarz</button>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article__wrapper">
+          <header class="article__header">
+            <h3 class="article__title">
+              Tytuł artykułu
+            </h3>
+          </header>
+          <div class="article__info">
+            <span class="article__author">Autor artykułu</span><span class="article__date">13.02.2019</span>
+          </div>
+          <div class="article__content">
+            <p class="article__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia mollit anim id est laborum. Tempru orcis dapibus ultrices. Odio tempor orci dapibus ultrices in iaculis nunc sed augue fringilla ut morbi.
+            </p>
+          </div>
+        </div>
+        <div class="article__buttons">
+          <button class="article__button article__button--fav">Dodaj do ulubionych</button>
+          <button class="article__button article__button--comment">Dodaj komentarz</button>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article__wrapper">
+          <header class="article__header">
+            <h3 class="article__title">
+              Tytuł artykułu
+            </h3>
+          </header>
+          <div class="article__info">
+            <span class="article__author">Autor artykułu</span><span class="article__date">13.02.2019</span>
+          </div>
+          <div class="article__content">
+            <p class="article__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolor eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia mollit anim id est laborum. Tempru orcis dapibus ultrices. Odio tempor orci dapibus ultrices in iaculis nunc sed augue fringilla ut morbi.
+            </p>
+          </div>
+        </div>
+        <div class="article__buttons">
+          <button class="article__button article__button--fav">Dodaj do ulubionych</button>
+          <button class="article__button article__button--comment">Dodaj komentarz</button>
+        </div>
+      </article>
+
+    </section>
+
+  </section>
+
+<script src="src/js/script.js"></script>
+
+</body>
+</html>

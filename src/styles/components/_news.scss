@@ -1,0 +1,33 @@
+.news {
+  max-width: $component-max-width;
+  padding: map-get($small, component-padding);
+  margin: 0 auto;
+
+  @include large-screen {
+    padding: map-get($large, component-padding);
+  }
+
+  &__header {
+    margin-bottom: map-get($small, header-spacer);
+
+    @include large-screen {
+      margin-bottom: map-get($large, header-spacer);
+    }
+  }
+
+  &__headline {
+    color: $news-headline-color;
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+
+  &__content {
+
+    @include large-screen {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      justify-content: space-between;
+    }
+  }
+}

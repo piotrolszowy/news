@@ -1,0 +1,95 @@
+.article {
+  $root: &;
+  background-color: $article-bg-color;
+  margin-bottom: map-get($small, articles-spacer);
+
+  @include large-screen {
+    width: flex-item-width($articles-per-row, map-get($large, articles-spacer));
+    margin-bottom: map-get($large, articles-spacer);
+  }
+
+  &--active {
+    box-shadow: 0 .15rem 1.25rem $article-active-shadow-color;
+
+    & #{$root}__wrapper {
+      border-color: $article-active-border-color;
+      border-top-width: .3rem;
+      padding-top: 1.75rem;
+    }
+  }
+
+  &__wrapper {
+    border: solid $article-border-color;
+    border-width: .05rem .05rem 0;
+    padding: 2rem;
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    color: $article-title-color;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  &__info {
+    margin-bottom: .8rem;
+  }
+
+  &__author {
+    color: $article-author-color;
+    font-weight: 500;
+    font-size: .85rem;
+  }
+
+  &__date {
+    color: $article-date-color;
+    font-weight: 500;
+    font-size: .85rem;
+    border-left: .1rem solid $article-info-separator-color;
+    padding-left: .4rem;
+    margin-left: .5rem;
+  }
+
+  &__description {
+    color: $article-description-color;
+    font-size: .85rem;
+    line-height: 1.8;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    @extend %button-default;
+
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $article-button-color;
+    color: $article-button-text-color;
+    font-weight: 500;
+    font-size: .9rem;
+    line-height: 1.4;
+    padding: 1rem 1.5rem .85rem;
+
+    @include button-hover-transition();
+
+    &:hover {
+      background-color: darken($article-button-color, 7);
+    }
+
+    &--fav {
+      background-color: $article-button-fav-color;
+
+      &:hover {
+        background-color: darken($article-button-fav-color, 7);
+      }
+    }
+  }
+}

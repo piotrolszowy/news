@@ -1,0 +1,39 @@
+// --- MIXINS, FUNCTIONS, PLACEHOLDERS -- //
+
+@mixin large-screen {
+  @media only screen and (min-width: #{$breaking-point}) {
+    @content;
+  }
+}
+
+@function flex-item-width($cols, $spacer) {
+  @return calc((100% - #{$spacer * ($cols - 1)}) / #{$cols});  // flex-item-width(2, 2rem) => calc((100% - 2rem) / 2);
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin modal-overlay-transition() {
+  @include transition(opacity .5s ease);
+}
+
+@mixin modal-transition() {
+  @include transition(opacity .5s ease, transform .5s ease);
+}
+
+@mixin button-hover-transition() {
+  @include transition(background-color .3s ease);
+}
+
+@mixin input-focus-transition() {
+  @include transition(box-shadow .3s ease, border-color .3s ease);
+}
+
+%button-default {
+  outline: none;
+  cursor: pointer;
+}

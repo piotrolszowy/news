@@ -1,0 +1,46 @@
+.form {
+  &__input, &__textarea {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: .1rem solid $input-border-color;
+    border-radius: .15rem;
+    color: $input-text-color;
+    font-weight: 500;
+    padding: .85rem .7rem;
+    margin-bottom: 1rem;
+
+    @include input-focus-transition();
+
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+
+    &:focus {
+      border-color: $input-focused-border-color;
+    }
+  }
+
+  &__textarea {
+    height: 12rem;
+    resize: none;
+  }
+
+  &__submit {
+    @extend %button-default;
+
+    display: block;
+    background-color: $form-submit-color;
+    color: $form-submit-text-color;
+    font-weight: 500;
+    font-size: .9rem;
+    padding: 1rem 2rem .85rem;
+    margin: 1.5rem auto 0;
+
+    @include button-hover-transition();
+
+    &:hover {
+      background-color: darken($form-submit-color, 7);
+    }
+  }
+}

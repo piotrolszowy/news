@@ -1,0 +1,62 @@
+// ------------ COLOR VALUES ------------ //
+
+$black:                          #282923;
+$white:                          #FFFFFF;
+
+$light-gray:                     #E4E8EB;
+$dark-gray:                      #ACBAC6;
+$darker-gray:                    #626262;
+
+$blue:                           #00A4FF;
+
+$red:                            #D2000C;
+
+
+// ---------------- BASE ---------------- //
+
+$page-bg-color:                  $light-gray;
+$page-text-color:                $black;
+
+
+// ---------------- NEWS ---------------- //
+
+$news-headline-color:            $black;
+
+
+// -------------- ARTICLE --------------- //
+
+$article-bg-color:               $white;
+$article-border-color:           $dark-gray;
+$article-active-border-color:    $red;
+$article-active-shadow-color:    rgba(95,95,95,.35);
+
+$article-title-color:            $black;
+$article-author-color:           $red;
+$article-info-separator-color:   $dark-gray;
+$article-date-color:             $dark-gray;
+$article-description-color:      $black;
+
+$article-button-color:           $dark-gray;
+$article-button-fav-color:       $blue;
+$article-button-text-color:      $white;
+
+
+// --------------- MODAL ---------------- //
+
+$modal-overlay-color:            rgba(70,70,70,0.80);
+
+$modal-bg-color:                 $white;
+$modal-headline-color:           $black;
+$modal-close-color:              $black;
+$modal-close-text-color:         $white;
+
+
+// ---------------- FORM ---------------- //
+
+$input-border-color:             $darker-gray;
+$input-focused-border-color:     $black;
+$input-placeholder-color:        $dark-gray;
+$input-text-color:               $black;
+
+$form-submit-color:              $red;
+$form-submit-text-color:         $white;

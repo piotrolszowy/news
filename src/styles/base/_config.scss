@@ -1,0 +1,25 @@
+// --------------- RWD ------------------ //
+
+$breaking-point:             900px;
+
+$component-max-width:        1200px;
+$modal-width:                500px;
+$articles-per-row:           2;
+
+
+// ----------- SMALL SCREEN ------------- //
+
+$small: (
+  component-padding:         2rem 1rem,
+  header-spacer:             2rem,
+  articles-spacer:           2rem,
+);
+
+
+// ----------- LARGE SCREEN ------------- //
+
+$large: (
+  component-padding:         4.5rem 4rem,
+  header-spacer:             2.5rem,
+  articles-spacer:           3rem,
+);

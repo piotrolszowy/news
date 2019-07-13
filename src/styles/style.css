@@ -1,0 +1,311 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, input, textarea, label, legend, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik-regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/rubik-medium.woff") format("woff");
+}
+.article__button, .modal__close, .form__submit {
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: #E4E8EB;
+  color: #282923;
+  font: 400 1rem/1 Rubik, sans-serif;
+}
+
+.news {
+  max-width: 1200px;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 900px) {
+  .news {
+    padding: 4.5rem 4rem;
+  }
+}
+.news__header {
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 900px) {
+  .news__header {
+    margin-bottom: 2.5rem;
+  }
+}
+.news__headline {
+  color: #282923;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 900px) {
+  .news__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+  }
+}
+
+.article {
+  background-color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 900px) {
+  .article {
+    width: calc((100% - 3rem) / 2);
+    margin-bottom: 3rem;
+  }
+}
+.article--active {
+  box-shadow: 0 0.15rem 1.25rem rgba(95, 95, 95, 0.35);
+}
+.article--active .article__wrapper {
+  border-color: #D2000C;
+  border-top-width: .3rem;
+  padding-top: 1.75rem;
+}
+.article__wrapper {
+  border: solid #ACBAC6;
+  border-width: .05rem .05rem 0;
+  padding: 2rem;
+}
+.article__header {
+  margin-bottom: 1rem;
+}
+.article__title {
+  color: #282923;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.article__info {
+  margin-bottom: .8rem;
+}
+.article__author {
+  color: #D2000C;
+  font-weight: 500;
+  font-size: .85rem;
+}
+.article__date {
+  color: #ACBAC6;
+  font-weight: 500;
+  font-size: .85rem;
+  border-left: 0.1rem solid #ACBAC6;
+  padding-left: .4rem;
+  margin-left: .5rem;
+}
+.article__description {
+  color: #282923;
+  font-size: .85rem;
+  line-height: 1.8;
+}
+.article__buttons {
+  display: flex;
+}
+.article__button {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ACBAC6;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: .9rem;
+  line-height: 1.4;
+  padding: 1rem 1.5rem .85rem;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.article__button:hover {
+  background-color: #97a8b7;
+}
+.article__button--fav {
+  background-color: #00A4FF;
+}
+.article__button--fav:hover {
+  background-color: #008ddb;
+}
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(70, 70, 70, 0.8);
+  opacity: 0;
+  z-index: -1;
+}
+.modal-overlay--active {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -300%);
+  width: 500px;
+  max-width: 100%;
+  background-color: #FFFFFF;
+  padding: 1.5rem 2rem;
+  opacity: 0;
+  z-index: -1;
+}
+.modal--active {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 3;
+  -webkit-transition: opacity 0.5s ease, transform 0.5s ease;
+  -moz-transition: opacity 0.5s ease, transform 0.5s ease;
+  -o-transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.modal__header {
+  margin-bottom: 1.35rem;
+}
+.modal__headline {
+  color: #282923;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+.modal__close {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translate(-115%, -50%);
+  background-color: #282923;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .9rem;
+  padding: .35rem .85rem .25rem;
+}
+@media only screen and (min-width: 900px) {
+  .modal__close {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.form__input, .form__textarea {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 0.1rem solid #626262;
+  border-radius: .15rem;
+  color: #282923;
+  font-weight: 500;
+  padding: .85rem .7rem;
+  margin-bottom: 1rem;
+  -webkit-transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  -moz-transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  -o-transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.form__input::placeholder, .form__textarea::placeholder {
+  color: #ACBAC6;
+}
+.form__input:focus, .form__textarea:focus {
+  border-color: #282923;
+}
+.form__textarea {
+  height: 12rem;
+  resize: none;
+}
+.form__submit {
+  display: block;
+  background-color: #D2000C;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: .9rem;
+  padding: 1rem 2rem .85rem;
+  margin: 1.5rem auto 0;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.form__submit:hover {
+  background-color: #ae000a;
+}
